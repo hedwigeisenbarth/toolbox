@@ -72,7 +72,7 @@ classdef physio_data < design_matrix
                 
                 %Add Data matrix
                 try
-                    if(~ismatrix(dat) || ~isnumeric(dat) || iscell(dat))
+                    if( ~isnumeric(dat) || iscell(dat))
                         error('Make sure input data is a matrix')
                     end
                     if(length(varname) ~= size(dat,2) || ~iscell(varname));
